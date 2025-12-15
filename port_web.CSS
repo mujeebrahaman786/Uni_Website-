@@ -9,7 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     min-height: 100%;
     width: 100%;
@@ -165,6 +164,13 @@ main {
 /**/
 
 /* Grid de destinations */
+
+.destinations-grid a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+}
 .destinations-grid {
   display: flex;
   flex-wrap: wrap;

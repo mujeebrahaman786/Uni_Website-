@@ -9,6 +9,12 @@ html {
     scroll-behavior: smooth;
 }
 
+.card-link {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
 body {
     min-height: 100%;
     width: 100%;
@@ -198,6 +204,7 @@ main {
     font-weight: bold;
     margin-bottom: 10px;
      }
+     
 
 .card img {
   width: 100%;

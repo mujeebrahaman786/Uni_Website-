@@ -1,0 +1,75 @@
+*{
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box ;
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+}
+body{ 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: url(coverr.png);
+   background-position: center;
+   background-size: cover;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px; /* top-bottom 10px, left-right 20px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(70px) ;   /* Légère transparence pour voir le header */
+  flex-wrap: wrap;                          /* quand ont minimize header cette option aide en organize les option mieux */
+  z-index: 1000; /* sur que le header va etre toujour visible et en top */
+}
+
+.Titre {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  flex: 1;
+  color: white;
+}
+
+.menu-logo img {
+  height: 50px; /* adjust as needed */
+  width: auto;
+}
+
+nav {
+  display: flex; /* Added for proper alignment */
+  align-items: center;
+  gap: 30px;;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+
+}
+
+nav a:hover {
+  border-bottom: 3px solid #92E0E5;
+}
+
+section{
+   background-color: transparent;
+   border: 2px solid rgba(255,255,255,0.2);
+   backdrop-filter: blur(20px) ;
+   padding: 30px;
+   width: 420px;
+   border-radius: 20px; 
+} 
+
+
+
+

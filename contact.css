@@ -90,7 +90,7 @@ section h1 {
    border-radius: 25px;
    outline: none;
    background-color: transparent;
-   border: 2px solid rgba(255,255,255,0.2);
+   border: 2px solid rgba(255, 255, 255, 0.2);
    color: #fff;
    padding-right: 40px;
 }
@@ -98,25 +98,6 @@ section h1 {
    color: #fff;
 }
 
-.remenber-forgot {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   font-size: 14px;
-   color: #fff;
-   margin-bottom: 25px;
-}
-
-.remenber-forgot a , .register-link a {
-   color:#fff;
-   text-decoration: none;
-   transition: 0.5s;
-   font-weight: bold;
-}
-
-.remenber-forgot a:hover , .register-link a {
-   text-decoration: underline;
-}
 
 .login-btn {
    width: 100%;
@@ -132,8 +113,8 @@ section h1 {
 
 .login-btn:hover{
    background-color: transparent;
-   border: 2px solid rgba(255,255,255,0.2);
-   color: #fff;
+   border: 2px solid rgb(255, 255, 255);
+   color: #ffffff;
 }
 
 .register-link {

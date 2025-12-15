@@ -65,9 +65,10 @@ section{
    background-color: transparent;
    border: 2px solid rgba(255,255,255,0.2);
    backdrop-filter: blur(20px) ;
-   padding: 3%;
+   padding:30px;
    width: 600px;
    border-radius: 20px; 
+   align-content: center;
 } 
 
 section h3 {
@@ -75,6 +76,7 @@ section h3 {
     color: #000000;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    font-weight: bold;
 }
 
 

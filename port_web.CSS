@@ -9,11 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.card-link {
-  text-decoration: none;
-  display: inline-block;
-  color: inherit;
-}
 
 body {
     min-height: 100%;

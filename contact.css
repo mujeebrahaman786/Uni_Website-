@@ -90,7 +90,7 @@ section h1 {
    border-radius: 25px;
    outline: none;
    background-color: transparent;
-   border: 2px solid rgba(255, 255, 255, 0.2);
+   border: 2px solid rgba(255,255,255,0.2);
    color: #fff;
    padding-right: 40px;
 }
@@ -117,9 +117,3 @@ section h1 {
    color: #ffffff;
 }
 
-.register-link {
-   text-align: center;
-   margin-top: 25px;
-   color: #fff;
-   font-size: 14px;
-}

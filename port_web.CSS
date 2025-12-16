@@ -388,65 +388,15 @@ main {
   box-shadow: 0 4px 15px rgba(229, 90, 43, 0.4);
 }
 
-/* Solution 1: Ajuste le object-fit pour mobile */
-@media (max-width: 768px) {
-  .card img {
-    object-fit: contain; /* Montre l'image entière sans couper */
-    background-color: #f5f5f5; /* Fond gris si l'image ne remplit pas */
-  }
-}
-
-/* OU Solution 2: Garde object-fit cover mais ajuste la hauteur */
-@media (max-width: 768px) {
-  .card img {
-    height: 250px; /* Plus grand pour voir plus de l'image */
-    object-fit: cover;
-    object-position: center; /* Centre l'image */
-  }
-}
-
-/* OU Solution 3 (RECOMMANDÉE): Mix des deux */
-@media (max-width: 768px) {
-  .card {
-    flex: 0 0 calc(50% - 15px); /* 2 colonnes */
-  }
-  
-  .card img {
-    height: 280px; /* Hauteur fixe */
-    object-fit: cover; /* Remplit l'espace */
-    object-position: center center; /* Centre verticalement et horizontalement */
-    border-radius: 12px;
-  }
-}
-
+/* Responsive */
 @media (max-width: 480px) {
-  .card {
-    flex: 0 0 100%; /* 1 colonne sur mobile */
-    max-width: 100%; /* Prend toute la largeur */
+  .booking-cards {
+    padding: 30px 15px;
   }
   
-  .card img {
-    height: 300px; /* Plus grand sur mobile pour mieux voir */
-    width: 100%; /* Prend toute la largeur */
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-/* Fix additionnel: Assure que le container ne déborde pas */
-.destinations-grid {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; /* Empêche le scroll horizontal */
-}
-
-@media (max-width: 480px) {
-  .destinations-grid {
-    padding: 20px 15px; /* Plus de padding sur les côtés */
-  }
-  
-  .card {
-    margin: 0 auto 20px; /* Centre et ajoute espace en bas */
+  .booking-card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 

@@ -387,261 +387,66 @@ main {
   transform: scale(1.02);
   box-shadow: 0 4px 15px rgba(229, 90, 43, 0.4);
 }
-/* 📱 TABLETS (768px et moins) */
+
+/* Solution 1: Ajuste le object-fit pour mobile */
 @media (max-width: 768px) {
-  
-  /* 1. HEADER - Navigation mobile */
-  header {
-    padding: 10px 15px;
-    flex-direction: column; /* Stack verticalement */
-    gap: 15px;
-  }
-  
-  nav {
-    gap: 15px; /* Réduit l'espace entre les liens */
-    flex-wrap: wrap; /* Permet le wrap si nécessaire */
-    justify-content: center;
-  }
-  
-  nav a {
-    font-size: 16px; /* Plus petit */
-  }
-  
-  .menu-logo img {
-    height: 40px; /* Logo plus petit */
-  }
-  
-  /* 2. HERO SECTION - Cover photo */
-  .centre-text {
-    font-size: 36px; /* Plus petit sur mobile */
-    padding: 0 20px;
-  }
-  
-  .centre-text-2 {
-    font-size: 24px; /* Plus petit */
-    padding: 0 20px;
-  }
-  
-  .get-started {
-    padding: 12px 30px;
-    font-size: 16px;
-    width: auto; /* Ajuste la largeur */
-  }
-  
-  /* 3. TITRE SECTION */
-  .titre_2page h1 {
-    font-size: 36px; /* Plus petit */
-    padding: 0 20px;
-  }
-  
-  .titre_2page p {
-    font-size: 18px;
-    padding: 0 20px;
-  }
-  
-  /* 4. DESTINATIONS GRID - 2 colonnes sur tablet */
-  .destinations-grid {
-    gap: 15px;
-    padding: 30px 15px;
-  }
-  
-  .card {
-    flex: 0 0 calc(50% - 15px); /* 2 colonnes au lieu de 3 */
-  }
-  
-  .card h3 {
-    font-size: 24px;
-  }
-  
   .card img {
-    height: 220px; /* Plus petit */
-  }
-  
-  /* 5. BOOKING CARDS */
-  .booking-cards {
-    gap: 20px;
-    padding: 30px 15px;
-  }
-  
-  .booking-card {
-    flex: 1 1 calc(50% - 20px); /* 2 colonnes */
-    max-width: none;
-  }
-  
-  .cards-image {
-    height: 240px;
-  }
-  
-  .content-card {
-    padding: 20px;
-  }
-  
-  .content-card h3 {
-    font-size: 24px;
-  }
-  
-  .card-prices {
-    font-size: 20px;
+    object-fit: contain; /* Montre l'image entière sans couper */
+    background-color: #f5f5f5; /* Fond gris si l'image ne remplit pas */
   }
 }
 
-/* 📱 MOBILE (480px et moins) */
+/* OU Solution 2: Garde object-fit cover mais ajuste la hauteur */
+@media (max-width: 768px) {
+  .card img {
+    height: 250px; /* Plus grand pour voir plus de l'image */
+    object-fit: cover;
+    object-position: center; /* Centre l'image */
+  }
+}
+
+/* OU Solution 3 (RECOMMANDÉE): Mix des deux */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 15px); /* 2 colonnes */
+  }
+  
+  .card img {
+    height: 280px; /* Hauteur fixe */
+    object-fit: cover; /* Remplit l'espace */
+    object-position: center center; /* Centre verticalement et horizontalement */
+    border-radius: 12px;
+  }
+}
+
 @media (max-width: 480px) {
-  
-  /* 1. HEADER */
-  header {
-    padding: 10px;
-  }
-  
-  nav {
-    gap: 10px;
-  }
-  
-  nav a {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-  
-  .menu-logo img {
-    height: 35px;
-  }
-  
-  /* 2. HERO SECTION */
-  .cover-photo {
-    height: 70vh; /* Plus petit sur mobile */
-  }
-  
-  .centre-text {
-    font-size: 28px; /* Encore plus petit */
-    margin-bottom: 15px;
-  }
-  
-  .centre-text-2 {
-    font-size: 18px;
-  }
-  
-  .get-started {
-    padding: 10px 25px;
-    font-size: 14px;
-    top: 65%;
-  }
-  
-  /* 3. TITRE SECTION */
-  .titre_2page h1 {
-    font-size: 28px;
-    margin-top: 30px;
-  }
-  
-  .titre_2page p {
-    font-size: 16px;
-  }
-  
-  /* 4. DESTINATIONS GRID - 1 seule colonne */
-  .destinations-grid {
-    padding: 20px 10px;
-  }
-  
   .card {
-    flex: 0 0 100%; /* 1 colonne seulement */
-    max-width: 350px; /* Limite la largeur */
-    margin: 0 auto;
+    flex: 0 0 100%; /* 1 colonne sur mobile */
+    max-width: 100%; /* Prend toute la largeur */
   }
   
   .card img {
-    height: 200px;
-  }
-  
-  .card h3 {
-    font-size: 22px;
-  }
-  
-  .card p {
-    font-size: 14px;
-  }
-  
-  /* 5. BOOKING CARDS - 1 colonne */
-  .booking-cards {
-    padding: 20px 10px;
-    gap: 20px;
-  }
-  
-  .booking-card {
-    flex: 1 1 100%; /* 1 seule colonne */
-    max-width: 100%;
-  }
-  
-  .cards-image {
-    height: 220px;
-  }
-  
-  .content-card {
-    padding: 15px;
-  }
-  
-  .content-card h3 {
-    font-size: 22px;
-  }
-  
-  .card-dis {
-    font-size: 14px;
-  }
-  
-  .feature-tag {
-    font-size: 12px;
-    padding: 6px 12px;
-    margin-right: 5px;
-    margin-bottom: 8px;
-  }
-  
-  .card-prices {
-    font-size: 20px;
-  }
-  
-  .book-button {
-    padding: 12px 20px;
-    font-size: 14px;
-  }
-  
-  /* 6. FOOTER */
-  footer {
-    padding: 30px 15px;
-  }
-  
-  footer h4 {
-    font-size: 18px;
-  }
-  
-  footer p {
-    font-size: 14px;
+    height: 300px; /* Plus grand sur mobile pour mieux voir */
+    width: 100%; /* Prend toute la largeur */
+    object-fit: cover;
+    object-position: center;
   }
 }
 
-/* 📱 TRÈS PETITS MOBILES (360px et moins) */
-@media (max-width: 360px) {
-  
-  .centre-text {
-    font-size: 24px;
+/* Fix additionnel: Assure que le container ne déborde pas */
+.destinations-grid {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Empêche le scroll horizontal */
+}
+
+@media (max-width: 480px) {
+  .destinations-grid {
+    padding: 20px 15px; /* Plus de padding sur les côtés */
   }
   
-  .centre-text-2 {
-    font-size: 16px;
-  }
-  
-  nav a {
-    font-size: 12px;
-  }
-  
-  .card h3 {
-    font-size: 20px;
-  }
-  
-  .content-card h3 {
-    font-size: 20px;
-  }
-  
-  .feature-tag {
-    font-size: 11px;
-    padding: 5px 10px;
+  .card {
+    margin: 0 auto 20px; /* Centre et ajoute espace en bas */
   }
 }
 

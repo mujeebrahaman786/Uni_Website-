@@ -350,7 +350,7 @@ main {
     color: #555;
 }
 
-.starts {
+.stars {
   color: #f39c12;
   font-size: 18px;
   letter-spacing: 2px;
@@ -377,6 +377,8 @@ main {
  /************ reserver maintenant bottun style **********************/
 
 .book-button {
+  display: inline-block;
+  text-decoration: none;
   padding: 14px 30px ;
   background: linear-gradient(135deg, #E55A2B, #f39c12);
   color: white;
@@ -397,6 +399,7 @@ main {
 }
 
 .hr-line hr{
+  margin: 0;
   height: 3px;
   color: #000000;
   background-color: #000000;
@@ -405,10 +408,10 @@ main {
 
 /* FOOTER STYLE */
 footer {
-  margin-bottom: 0;
+    margin-bottom: 0;
     background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
     color: white;
-    margin-top: 80px;
+    margin-top: 0px;
     padding: 60px 40px 20px;
     box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.3);
 }
@@ -753,6 +756,9 @@ footer {
   }
 
   .get-started {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
     padding: 10px 25px;
     font-size: 14px;
     top: 65%;

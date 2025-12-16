@@ -387,25 +387,6 @@ main {
   transform: scale(1.02);
   box-shadow: 0 4px 15px rgba(229, 90, 43, 0.4);
 }
-
-/* Responsive */
-@media (max-width: 480px) {
-  .booking-cards {
-    padding: 30px 15px;
-  }
-  
-  .booking-card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-
-/* ============================================
-   RESPONSIVE MEDIA QUERIES
-   Ajoute ce code À LA FIN de ton fichier CSS
-   ============================================ */
-
 /* 📱 TABLETS (768px et moins) */
 @media (max-width: 768px) {
   
@@ -663,6 +644,9 @@ main {
     padding: 5px 10px;
   }
 }
+
+
+
 
 
 

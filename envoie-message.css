@@ -104,6 +104,15 @@ section h3 {
   .menu-logo img {
     height: 35px;
   }
+
+  section h3 {
+    font-size: 20px;
+}
+
+  section {
+    padding: 10px;
+    
+
 }
 
 

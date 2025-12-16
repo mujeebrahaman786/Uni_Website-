@@ -1,813 +1,380 @@
-* {                     /* pour met 0 en tout browsers par default */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-    height: 100%;
-    scroll-behavior: smooth;
-}
-
-body {
-    min-height: 100%;
-    width: 100%;
-    background-color: rgb(252, 252, 252);
-    color: #000000; /* color noir pour mieux visibility */
-}
-
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 20px; /* top-bottom 10px, left-right 20px */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(70px) ;   /* Légère transparence pour voir le header */
-  flex-wrap: wrap;                          /* quand ont minimize header cette option aide en organize les option mieux */
-  z-index: 1000; /* sur que le header va etre toujour visible et en top */
-}
-
-.menu-logo img {
-  height: 50px; /* adjust as needed */
-  width: auto;
-}
-
-.Titre {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
-  flex: 1;
-  color: white;
-}
-
-nav {
-  display: flex; /* Added for proper alignment */
-  align-items: center;
-  gap: 30px;;
-}
-
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-
-}
-
-nav a:hover {
-  border-bottom: 3px solid #92E0E5;
-}
-
-main {
-  padding-top: 0 ;
-}
-
-/* c'est partie est une container */
-.cover-photo {
-  position: relative; /* c'est fait les position de content: ; */
-  width: 100%;
-  height: 100vh; /* Full viewport  */
-  overflow: hidden;       /* il est 3 option en overflow hidden/auto/scroll */
-}
-
-/* cette partie est tres important si non notre page affiche tres bizzare */
-.cover-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  
-  /* 2nd option pour mieux affichage de page 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  */
-}
-
-/* COVER TEXT - il faut etre dans .cover-photo en HTML */
-.cover_text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* horizontally et vertically */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  z-index: 10;                  /* Toujours visible */
-  width: 90%;
-}
-
-.centre-text {
-  font-size : 56px;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  font-family: 'Times New Roman', Times, serif;
-
-  }
-
-  .centre-text-2 {
-  font-size : 32px;
-  color: white;
-  font-weight: bold;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.4); /* makes text readable */  
-  font-family: 'Times New Roman', Times, serif;
-
-}
-
-.get-started {
-  padding: 16px 40px;
-  position: absolute;
-  background-color: white;
-  color: black;
-  top: 63%;
-  left: 50%;
-  border: none;
-  border-radius: 8px;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif ;
-  text-align: center;
-  align-items: center;
-  transform: translateX(-50%);  /* change le position de element par X ou Y*/
-}
-
-.get-started:hover {
-  background-color: #E55A2B;
-  cursor: pointer;
-}
-
-.titre_2page h1 { 
-  margin-top: 40px;
-  font-size: 48px;
-  text-align: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.titre_2page p {
-  margin-top: 12px;
-  font-size: 24px;
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-
-/**/
-
-.pack-part h3 {
-  font-size: 30px;
-  text-align: center;
-  padding-top: 25px;
-  font-style:italic;
-}
-
-/* Grid de destinations */
-.destinations-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* Style des cartes */
-.card {
-  flex: 1 1 300px;   /* pour avoir deux elements per ligne */
-  max-width: 400px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-
-/* Badge populaire */
-  .badge {
-  position: relative;  /* Changé de absolute à relative */
-  display: inline-block;
-  padding: 8px 18px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
-  border-radius: 25px;
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  }
-     
-
-.card img {
-  width: 100%;
-  height: 280px;
-  object-fit:cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-top: 15px;
-  margin-bottom: 8px;
-  font-family: 'Lucida Sans', sans-serif;
-}
-
-.card hr {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  height: 2px;
-
-}
-
-.card p {
-  font-size: 16px;
-  color: #666;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-/***********carte final de booking avec tout info **************/
-
-.booking-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/***********carte principle **************/
-
-.booking-card {
-  flex: 1 1 350px;
-  max-width: 450px;
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.booking-card:hover {
-  transform: translateY(-10px);         /*-10px transform: de photo au cote Y */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-
-}
-
-
-
-/***********carte image **************/
-
-.cards-image {
-  position:relative;
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-
-}
-
-.cards-image img {
-  position: relative;
-  width: 100%;
-  height: 100%;;
-  object-fit: cover;
-}
-
-.booking-card:hover .cards-image img {
-  transform: scale(1.1);        /* pour zoom ou scale img */
-}
-
-.content-card {
-  padding: 25px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.content-card h3 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #2C3E50;
-  font-family: 'Lucida Sans', sans-serif;
-}
-
-.card-dis {
-  font-size: 16px;
-  color: #7f8c8d;
-  margin-bottom: 15px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.card-location {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 12px;
-}
-
-.location-icon {
-  color: #E55A2B;
-
-}
-
-.card-rating {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.features {
-    margin-bottom: 20px;
-}
-
-.feature-tag {
-    display: inline-block;
-    padding: 8px 15px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    background: #f0f3f7;
-    border-radius: 20px;
-    font-size: 13px;
-    color: #555;
-}
-
-.stars {
-  color: #f39c12;
-  font-size: 18px;
-  letter-spacing: 2px;
-}
-
-.review-count {
-  font-size: 14px;
-  color: #7f8c8d;
-}
-
-.card-prices {
-  font-size: 24px;
-  font-weight: bold;
-  color: #27ae60;
-  margin-bottom: 15px;
-}
-
-.price-info {
-  font-size: 22px;
-  color: #7f8c8d;
-  font-weight: normal;
-  margin-top: 5px;
-}
- /************ reserver maintenant bottun style **********************/
-
-.book-button {
-  display: inline-block;
-  text-decoration: none;
-  padding: 14px 30px ;
-  background: linear-gradient(135deg, #E55A2B, #f39c12);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  margin-top: auto;
-}
-
-.book-button:hover {
-  background: linear-gradient(135deg, #c74622, #e67e22);
-  transform: scale(1.02);
-  box-shadow: 0 4px 15px rgba(229, 90, 43, 0.4);
-}
-
-.hr-line hr{
-  margin: 0;
-  height: 3px;
-  color: #000000;
-  background-color: #000000;
-  margin-top: 30px;
-}
-
-/* FOOTER STYLE */
-footer {
-    margin-bottom: 0;
-    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-    color: white;
-    margin-top: 0px;
-    padding: 60px 40px 20px;
-    box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.3);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding-bottom: 40px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-    padding: 0 15px;
-}
-
-.footer-section h3 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    color: white;
-    font-weight: 700;
-}
-
-.footer-section h4 {
-    color: #667eea;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-section h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 3px;
-    background: #667eea;
-    border-radius: 2px;
-}
-
-.footer-section p {
-    color: #cbd5e0;
-    line-height: 28px;
-    margin-bottom: 20px;
-    font-size: 15px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 12px;
-}
-
-.footer-section a {
-    color: #cbd5e0;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    font-size: 15px;
-}
-
-.footer-section a:hover {
-    color: #667eea;
-    transform: translateX(5px);
-}
-
-.contact-info li {
-    color: #cbd5e0;
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 15px;
-}
-
-/* Social Links - Beautiful circular icons */
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-links a {
-    color: white;
-    font-size: 20px;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.social-links a:hover {
-    transform: translateY(-5px) scale(1.1);
-    background: #667eea;
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-}
-
-/* Footer Bottom */
-.footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 30px;
-    margin-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    color: #cbd5e0;
-}
-
-.footer-bottom p {
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-.footer-links {
-    margin-top: 15px;
-}
-
-.footer-links a {
-    color: #cbd5e0;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    margin: 0 10px;
-    font-size: 14px;
-}
-
-.footer-links a:hover {
-    color: #667eea;
-}
-
-/* Responsive Footer */
-@media (max-width: 768px) {
-    footer {
-        padding: 48px 20px 20px;
-        margin-top: 60px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .footer-section {
-        min-width: 100%;
-        padding: 0;
-    }
-
-    .footer-section h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .contact-info li {
-        justify-content: center;
-    }
-
-    .footer-section a:hover {
-        transform: translateX(0);
-    }
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.footer-section {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-.footer-section:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.footer-section:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.footer-section:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.footer-section:nth-child(4) {
-    animation-delay: 0.4s;
-}
-/*Responsive pour les appreil diffrent par example Mobile */
-/***********************************************************/
-/* TABLETS ( 768px et moins ) */
-
-@media (max-width: 768px){
-
-  /* header */
-  header {
-    padding: 10px 15px;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav {
-    gap: 15px;
-    flex-wrap:wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    font-size: 16px;
-  }
-
-  .menu-logo img{
-    height: 40px;
-  }
-
-  .cover-photo {
-    height: 80vh;
-  }
-
-  .centre-text {
-    font-size: 36px;
-    padding: 0 20px;
-  
-  }
-
-  .centre-text-2 {
-    font-size: 24px;
-    padding: 0 20px;
-  }
-
-  .get-started {
-    padding: 12px 30px;
-    font-size: 16px;
-  }
-
-  /* Section de Titre */
-
-.titre_2page h1 {
-  font-size: 36px;
-  padding: 0 20px;
-
-}
-
-.titre_2page p {
-  font-size: 18px;
-
-}
-
-
-/* DESTINATIONS GRID */
-.destinations-grid {
-  gap: 15px;
-  padding: 30px 15px;
-  overflow-x: hidden;
-}
-
-.card {
-  flex: 1 1 calc(50% - 15px);
-  max-width: none;    /* Enleve les Limites */
-}
-
-.card img {
-  height: 250px;
-  object-fit: cover;
-  object-position: center;
-
-}
-
-.card h3 {
-  font-size: 24px;
-
-}
-
-}
-
-/* Responsive Mobile 480px au plus petit */
-
-@media (max-width: 480px){
-
-  header {
-    padding: 10px;
-  }
-
-  nav{
-    gap: 5px;
-
-  }
-
-  nav a {
-    font-size: 14px;
-    padding: 14px;
-    padding: 5px 10px;
-
-  }
- 
-  .menu-logo img {
-    height: 35px;
-  }
-
-  .cover-photo {
-    height: 70vh;
-  }
-
-  .centre-text {
-    font-size: 28px;
-    margin: 15px;
-    padding: 0 15px;
-  }
-
-  .centre-text {
-    font-size: 28px;
-    margin-bottom: 15px;
-    padding: 0 15px;
-  }
-
-  .centre-text-2 {
-    font-size: 18px;
-    padding: 0 15px;
-  }
-
-  .get-started {
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 10px 25px;
-    font-size: 14px;
-    top: 65%;
-    width: calc(100% - 30px);
-    max-width: 300px;
-  }
-
-  /* Titre Section */
-
-  .titre_2page h1{
-    font-size: 28px;
-    margin-top: 30px;
-    padding: 0 15px;
-  }
-
-  .titre_2page p {
-    font-size: 16px;
-    padding: 0 15px;
-  }
-
-
-  .pack-part h3{
-    font-size: 20px;
-    padding: 20px auto;
-
-}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Voyages & l'Aventure</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="port_web.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/12d8937476.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="menu-logo">
+        <img src="logo_page.png" alt="Logo de Site de Voyage">
+      </div>
+
+      <nav>
+        <a href="index.html"><b>ACCUEIL</b></a>
+        <a href="#destinations"><b>DESTINATIONS</b></a>
+        <a href="contact.html"><b>CONTACT</b></a>        
+      </nav>
+    </header>
     
-  .destinations-grid{
-    padding: 20px 15px;
-  }
+    <main>
+      <!-- Hero Section -->
 
-  .card {
-    flex: 1 1 100%;   /* 1 Colonne sur Mobile */
-    max-width: 100%;
-    margin: 0 auto 20px;
-  }
+      <section class="cover-photo" id="home">
+        <img src="coverr.png" alt="photo de couverture">
 
-  .card img {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-    background-color: #f5f5f5;
-  }
-  
-  .card h3{
-    font-size: 22px;
-  }
+        <div class="cover_text">
+          <div class="centre-text">Explorez le Monde Sans Limites</div> 
+          <div class="centre-text-2">Votre Aventure Commence Ici</div>
+        </div>
+        <a href="#Forfaits" class="get-started">
+          <b>Découvrez nos Destinations</b>
+        </a>
+      </section>
 
-  .card p{
-    font-size: 14px;
-  }
-}
+      <!-- Destinations Section -->
+      <section class="titre_2page" id="destinations">
+        <h1>DESTINATIONS</h1>
+        <p>Votre Voyage Commence Ici</p>
+      </section>
+
+      <!-- IMPORTANT: Grid container! -->
+      <div class="destinations-grid">
+        
+        <div class="card">
+          <img src="grece.jpg" alt="Santorin">
+          <h3>🇬🇷 Grèce </h3>
+          <p>Relax • Islands • Scenic</p>
+          <hr>
+        </div>
+
+        <div class="card">
+          <img src="tokyo.jpeg" alt="Tokyo">
+          <h3>🇯🇵 JAPAN</h3>
+          <p>Technology • Urban • Culture</p>
+          <hr>
+        </div>
+
+        
+
+        <div class="card">
+          <img src="morocco.jpeg" alt="Désert du Sahara">
+          <h3>🇲🇦 MOROCCO</h3>
+          <p>Desert • Safari • Adventure</p>
+          <hr>
+        </div>
+
+        <div class="card">
+          <img src="Francee.jpeg" alt="Paris">
+          <h3>🇫🇷 FRANCE</h3>
+          <p>Culture • Streets • Relax</p>
+          <hr>
+        </div>
+
+        <div class="card">
+          <img src="brazil.jpeg" alt="Plage Tropicale">
+          <h3>🇧🇷 BRAZIL</h3>
+          <p>Beaches • Nature • Tropical</p>
+          <hr>
+        </div>
+
+        <div class="card">
+          <img src="switzerland.jpeg" alt="Aventure en Montagne">
+          <h3>🇨🇭 SWITZERLAND</h3>
+          <p>Mountains • Hiking • Nature</p>
+          <hr>
+        </div>
+      </div>
+      <hr>
+
+      <!-- =========================================== -->
+      <!--Booking cards Santorin-->
+
+      <div class="pack-part" id="Forfaits">
+        <h2> Nos meilleures offres de voyage !!! </h2>
+      </div>
+      <div class="booking-cards">
+        
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="Santorin.jpg" alt="Santorin card">
+          </div>
+          <div class="content-card">
+            <span class="badge">⭐ Populaire</span>
+            <h3> Santorin place</h3>
+            <p class="card-dis"> Voyage Relaxants</p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Santorin, Grèce 🇬🇷 </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (490 avis) </span>
+            </div>
+
+          <div class="features">
+              <span class="feature-tag">🌅 Couchers de soleil légendaires</span>
+              <span class="feature-tag">🏖️ Plages rouges et noires uniques</span>
+              <span class="feature-tag">💒 Destination mariage #1</span>
+          </div>
+
+
+            <div class="card-prices">
+              A partir de 1199$
+              <div class="price-info"> par personne / 7 Nuits </div>
+            </div>
+            <a href="https://www.booking.com/hotel/gr/athina-luxury-suites.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
+             Reserver Maintenant ->
+            </a>
+          </div>
+        </div>
+
+        <!--Booking cards Tokyo-->
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="Tokyo.jpg" alt="Tokyo card">
+          </div>
+          <div class="content-card">
+              <span class="badge">🔥 Tendance</span>
+            <h3> Tokyo </h3>
+            <p class="card-dis"> Aventures Urbaines & Technologiques </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Tokyo, Japon 🇯🇵  </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★☆ </span>
+              <span class="review-count"> (519 avis) </span>
+            </div>
+
+            <div class="features">
+              <span class="feature-tag">🗼 Tokyo Tower</span>
+              <span class="feature-tag"> 🎌 Tradition & modernité </span>
+              <span class="feature-tag">🚄 Pass JR Shinkansen inclus</span>
+             </div>
+
+            <div class="card-prices">
+              A partir de 999$
+              <div class="price-info"> par personne / 5 Nuits </div>
+            </div>
+            <a href="https://www.booking.com/attractions/jp/prpmxzmjwy4a-tokyo-day-tour-in-mt-fuji-lake-ashi-cruise-and-owakudani-cable.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
+              Reserver Maintenant ->
+            </a>
+          </div>
+        </div>
+
+        <!--Booking cards Désert du sahara-->
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="sahara.jpg" alt="sahara card">
+          </div>
+          <div class="content-card">
+            <span class="badge">🏜️ Aventure</span>
+            <h3> Désert du Sahara </h3>
+            <p class="card-dis"> Safari & Tours dans le Désert </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Merzouga, Maroc 🇲🇦  </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (350 avis) </span>
+            </div>
+
+              <div class="features">
+              <span class="feature-tag">🐪 Balade à dos de chameau</span>
+              <span class="feature-tag">⛺ Nuit en camp berbère traditionnel</span>
+              <span class="feature-tag">🥘 Dîner tajine sous les étoiles</span>
+                </div>
+
+            <div class="card-prices">
+              A partir de 1072$
+              <div class="price-info"> par personne / 5 Nuits </div>
+            </div>
+            <a href="https://www.booking.com/hotel/ma/sahara-desert-luxury-camp.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
+              Reserver Maintenant ->
+            </a>
+          </div>
+        </div>
+
+        <!--Booking cards Paris-->
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="eiffle.jpg" alt="Paris card">
+          </div>
+          <div class="content-card">
+            <span class="badge">💝 Romantique</span>
+            <h3> Paris </h3>
+            <p class="card-dis"> Monuments Célèbres & Culture </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Paris, France 🇫🇷 </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (20,077 avis) </span>
+            </div>
+
+            <div class="features">
+              <span class="feature-tag">🗼 Tour Eiffel + Montée incluse</span>
+              <span class="feature-tag">🎨 Louvre & Musée d'Orsay</span>
+              <span class="feature-tag">🥐 Petit-déjeuner parisien</span>
+               </div>
+
+            <div class="card-prices">
+              A partir de 32$
+              <div class="price-info"> par personne / 1 Billet </div>
+            </div>
+          <a href="https://www.toureiffel.paris/en/rates-opening-times" target="_blank" rel="noopener noreferrer" class="book-button">
+            Reserver Maintenant ->
+          </a>
+          </div>
+        </div>
+
+        <!--Booking cards Plage Tropicale-->
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="beach.jpg" alt="Plage Tropicale card">
+          </div>
+          <div class="content-card">
+            <span class="badge">🌴 Luxe</span>
+            <h3> Plage Tropicale </h3>
+            <p class="card-dis"> Luxe & Paradis sur la Plage </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Atolls du Sud, Maldives 🇲🇻 </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (1,643 avis) </span>
+            </div>
+
+            <div class="features">
+            <span class="feature-tag">🏝️ Villa sur pilotis privée</span>
+            <span class="feature-tag">🤿 Snorkeling récif corallien</span>
+            <span class="feature-tag">🍽️ All inclusive</span>
+                </div>    
+
+            <div class="card-prices">
+              A partir de 4,433$
+              <div class="price-info"> par personne / 7 Nuits </div>
+            </div>
+            <a href="https://www.booking.com/hotel/mv/royal-island-resort-spa.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
+              Reserver Maintenant ->
+            </a>
+          </div>
+        </div>
+
+        <!--Booking cards mountain-->
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="mountain.jpg" alt="mountain card">
+          </div>
+          <div class="content-card">
+            <span class="badge">⛷️ Sport</span>
+            <h3> Aventure en Montagne </h3>
+            <p class="card-dis"> Aventures & Voyages Nature </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Interlaken, Suisse 🇨🇭 </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (269 avis) </span>
+            </div>
+
+            <div class="features">
+                <span class="feature-tag">⛷️ Forfait ski 6 jours</span>
+                <span class="feature-tag">🚡 Accès téléphériques</span>
+                <span class="feature-tag">🏔️ Vue sur l'Eiger et le Mönch</span>
+              </div>
+
+            <div class="card-prices">
+              A partir de 203$
+              <div class="price-info"> par personne / 1 Nuits </div>
+            </div>
+            <a href="https://www.booking.com/attractions/ch/pruevsngof4a-interlaken-paragliding-experience.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
+              Reserver Maintenant ->
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hr-line">
+      <hr>
+      </div>
+
+    </main>
+
+    <footer id="contact">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3> ✈️ Voyages & l'Aventure </h3>
+          <p> Votre partenaire de confiance pour des voyages inoubliables depuis 2025. </p>
+          <div class="social-links">
+            <a href="https://facebook.com" rel="noopener noreferrer" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://linkedin.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://Github.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-github"></i></a>
+          
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4> Destanations Populaires </h4>
+          <ul>
+            <li> <a href="#destinations">🇬🇷 Grèce </a></li>
+            <li> <a href="#destinations">🇯🇵 Japon </a></li>
+            <li> <a href="#destinations">🇲🇦 Maroc </a></li>
+            <li> <a href="#destinations">🇫🇷 France </a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4> Informations </h4>
+          <ul>
+            <li> <a href="index.html"> A propos </a></li>
+            <li> <a href="#Forfaits"> Nos Forfaits </a></li>
+            <li> <a href="#contact"> Contact </a></li>
+            <li> <a href="condition.html"> Conditions générales </a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4> Contactez-Nous</h4>
+          <ul class="contact-info">
+            <li>📞 +33 1 23 45 67 89</li>
+            <li>📧 info@voyages-aventure.fr</li>
+            <li>📍 Le Mans, France</li>
+            <li>⏰ Lun-Ven: 9h-18h</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p> © 2025 Voyages & l'Aventure. Tous droits réservés. </p>
+        <p class="footer-links">
+          <a href="#"> Politique de confidentialité </a>
+          <a href="#"> Mentions légales </a>
+          <a href="#"> Cookies </a>
+        </p>
+      </div>
+        </footer>
+  </body>
+</html>

@@ -550,15 +550,13 @@ main {
     padding: 0 15px;
   }
 
-}
 
-/*
   .pack-part h3{
-    font-size: 18px;
+    font-size: 20px;
     padding: 20px auto;
 
 }
-    */
+    
   .destinations-grid{
     padding: 20px 15px;
   }
@@ -583,3 +581,4 @@ main {
   .card p{
     font-size: 14px;
   }
+}

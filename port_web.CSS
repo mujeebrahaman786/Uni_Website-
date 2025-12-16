@@ -164,7 +164,7 @@ main {
 /**/
 
 .pack-part h3 {
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   padding-top: 25px;
   font-style:italic;
@@ -551,6 +551,12 @@ main {
 
 }
 
+
+.pack-part h3{
+  font-size: 18px;
+  padding: 20px auto;
+
+}
   .destinations-grid{
     padding: 20px 15px;
   }

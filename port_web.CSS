@@ -502,6 +502,29 @@ footer {
 }
 
 
+
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 48px 16px 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        min-width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
 /*Responsive pour les appreil diffrent par example Mobile */
 /***********************************************************/
 /* TABLETS ( 768px et moins ) */

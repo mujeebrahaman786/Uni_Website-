@@ -4,7 +4,7 @@
     <title>Voyages & l'Aventure</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="port_web.css">
+    <link rel="stylesheet" href="port_web.CSS">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/12d8937476.js" crossorigin="anonymous"></script>
   </head>
@@ -18,21 +18,20 @@
       <nav>
         <a href="index.html"><b>ACCUEIL</b></a>
         <a href="#destinations"><b>DESTINATIONS</b></a>
-        <a href="contact.html"><b>CONTACT</b></a>
+        <a href="contact.html"><b>CONTACT</b></a>        
       </nav>
     </header>
-
+    
     <main>
       <!-- Hero Section -->
+
       <section class="cover-photo" id="home">
-        <h2 hidden>Accueil</h2>
         <img src="coverr.png" alt="photo de couverture">
 
         <div class="cover_text">
-          <div class="centre-text">Explorez le Monde Sans Limites</div>
+          <div class="centre-text">Explorez le Monde Sans Limites</div> 
           <div class="centre-text-2">Votre Aventure Commence Ici</div>
         </div>
-
         <a href="#Forfaits" class="get-started">
           <b>Découvrez nos Destinations</b>
         </a>
@@ -44,10 +43,12 @@
         <p>Votre Voyage Commence Ici</p>
       </section>
 
+      <!-- IMPORTANT: Grid container! -->
       <div class="destinations-grid">
+        
         <div class="card">
           <img src="grece.jpg" alt="Santorin">
-          <h3>🇬🇷 Grèce</h3>
+          <h3>🇬🇷 Grèce </h3>
           <p>Relax • Islands • Scenic</p>
           <hr>
         </div>
@@ -58,6 +59,8 @@
           <p>Technology • Urban • Culture</p>
           <hr>
         </div>
+
+        
 
         <div class="card">
           <img src="morocco.jpeg" alt="Désert du Sahara">
@@ -87,64 +90,291 @@
           <hr>
         </div>
       </div>
+      <hr>
+
+      <!-- =========================================== -->
+      <!--Booking cards Santorin-->
 
       <div class="pack-part" id="Forfaits">
-        <h2>Nos meilleures offres de voyage !!!</h2>
+        <h2> Nos meilleures offres de voyage !!! </h2>
       </div>
-
       <div class="booking-cards">
+        
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="Santorin.jpg" alt="Santorin card">
+          </div>
+          <div class="content-card">
+            <span class="badge">⭐ Populaire</span>
+            <h3> Santorin place</h3>
+            <p class="card-dis"> Voyage Relaxants</p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Santorin, Grèce 🇬🇷 </span>
+            </div>
 
-        <!-- Tokyo -->
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (490 avis) </span>
+            </div>
+
+          <div class="features">
+              <span class="feature-tag">🌅 Couchers de soleil légendaires</span>
+              <span class="feature-tag">🏖️ Plages rouges et noires uniques</span>
+              <span class="feature-tag">💒 Destination mariage #1</span>
+          </div>
+
+
+            <div class="card-prices">
+              A partir de 1199$
+              <div class="price-info"> par personne / 7 Nuits </div>
+            </div>
+            <a href="https://www.booking.com/hotel/gr/athina-luxury-suites.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
+             Reserver Maintenant ->
+            </a>
+          </div>
+        </div>
+
+        <!--Booking cards Tokyo-->
         <div class="booking-card">
           <div class="cards-image">
             <img src="Tokyo.jpg" alt="Tokyo card">
           </div>
           <div class="content-card">
-            <span class="badge">🔥 Tendance</span>
-            <h3>Tokyo</h3>
+              <span class="badge">🔥 Tendance</span>
+            <h3> Tokyo </h3>
+            <p class="card-dis"> Aventures Urbaines & Technologiques </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Tokyo, Japon 🇯🇵  </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★☆ </span>
+              <span class="review-count"> (519 avis) </span>
+            </div>
+
+            <div class="features">
+              <span class="feature-tag">🗼 Tokyo Tower</span>
+              <span class="feature-tag"> 🎌 Tradition & modernité </span>
+              <span class="feature-tag">🚄 Pass JR Shinkansen inclus</span>
+             </div>
 
             <div class="card-prices">
               A partir de 999$
-              <div class="price-info">par personne / 5 Nuits</div>
+              <div class="price-info"> par personne / 5 Nuits </div>
             </div>
-
-            <a href="https://www.booking.com/attractions/jp/prpmxzmjwy4a-tokyo-day-tour-in-mt-fuji-lake-ashi-cruise-and-owakudani-cable.fr.html"
-               target="_blank"
-               class="book-button">
+            <a href="https://www.booking.com/attractions/jp/prpmxzmjwy4a-tokyo-day-tour-in-mt-fuji-lake-ashi-cruise-and-owakudani-cable.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
               Reserver Maintenant ->
             </a>
           </div>
         </div>
 
-        <!-- Sahara -->
+        <!--Booking cards Désert du sahara-->
         <div class="booking-card">
           <div class="cards-image">
             <img src="sahara.jpg" alt="sahara card">
           </div>
           <div class="content-card">
             <span class="badge">🏜️ Aventure</span>
-            <h3>Désert du Sahara</h3>
+            <h3> Désert du Sahara </h3>
+            <p class="card-dis"> Safari & Tours dans le Désert </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Merzouga, Maroc 🇲🇦  </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (350 avis) </span>
+            </div>
+
+              <div class="features">
+              <span class="feature-tag">🐪 Balade à dos de chameau</span>
+              <span class="feature-tag">⛺ Nuit en camp berbère traditionnel</span>
+              <span class="feature-tag">🥘 Dîner tajine sous les étoiles</span>
+                </div>
 
             <div class="card-prices">
               A partir de 1072$
-              <div class="price-info">par personne / 5 Nuits</div>
+              <div class="price-info"> par personne / 5 Nuits </div>
             </div>
-
-            <a href="https://www.booking.com/hotel/ma/sahara-desert-luxury-camp.fr.html"
-               target="_blank"
-               class="book-button">
+            <a href="https://www.booking.com/hotel/ma/sahara-desert-luxury-camp.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
               Reserver Maintenant ->
             </a>
           </div>
         </div>
 
+        <!--Booking cards Paris-->
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="eiffle.jpg" alt="Paris card">
+          </div>
+          <div class="content-card">
+            <span class="badge">💝 Romantique</span>
+            <h3> Paris </h3>
+            <p class="card-dis"> Monuments Célèbres & Culture </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Paris, France 🇫🇷 </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (20,077 avis) </span>
+            </div>
+
+            <div class="features">
+              <span class="feature-tag">🗼 Tour Eiffel + Montée incluse</span>
+              <span class="feature-tag">🎨 Louvre & Musée d'Orsay</span>
+              <span class="feature-tag">🥐 Petit-déjeuner parisien</span>
+               </div>
+
+            <div class="card-prices">
+              A partir de 32$
+              <div class="price-info"> par personne / 1 Billet </div>
+            </div>
+          <a href="https://www.toureiffel.paris/en/rates-opening-times" target="_blank" rel="noopener noreferrer" class="book-button">
+            Reserver Maintenant ->
+          </a>
+          </div>
+        </div>
+
+        <!--Booking cards Plage Tropicale-->
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="beach.jpg" alt="Plage Tropicale card">
+          </div>
+          <div class="content-card">
+            <span class="badge">🌴 Luxe</span>
+            <h3> Plage Tropicale </h3>
+            <p class="card-dis"> Luxe & Paradis sur la Plage </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Atolls du Sud, Maldives 🇲🇻 </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (1,643 avis) </span>
+            </div>
+
+            <div class="features">
+            <span class="feature-tag">🏝️ Villa sur pilotis privée</span>
+            <span class="feature-tag">🤿 Snorkeling récif corallien</span>
+            <span class="feature-tag">🍽️ All inclusive</span>
+                </div>    
+
+            <div class="card-prices">
+              A partir de 4,433$
+              <div class="price-info"> par personne / 7 Nuits </div>
+            </div>
+            <a href="https://www.booking.com/hotel/mv/royal-island-resort-spa.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
+              Reserver Maintenant ->
+            </a>
+          </div>
+        </div>
+
+        <!--Booking cards mountain-->
+        <div class="booking-card">
+          <div class="cards-image">
+            <img src="mountain.jpg" alt="mountain card">
+          </div>
+          <div class="content-card">
+            <span class="badge">⛷️ Sport</span>
+            <h3> Aventure en Montagne </h3>
+            <p class="card-dis"> Aventures & Voyages Nature </p>
+            
+            <div class="card-location">
+              <span class="location-icon"> 📍 </span>
+              <span> Interlaken, Suisse 🇨🇭 </span>
+            </div>
+
+            <div class="card-rating">
+              <span class="stars"> ★★★★★ </span>
+              <span class="review-count"> (269 avis) </span>
+            </div>
+
+            <div class="features">
+                <span class="feature-tag">⛷️ Forfait ski 6 jours</span>
+                <span class="feature-tag">🚡 Accès téléphériques</span>
+                <span class="feature-tag">🏔️ Vue sur l'Eiger et le Mönch</span>
+              </div>
+
+            <div class="card-prices">
+              A partir de 203$
+              <div class="price-info"> par personne / 1 Nuits </div>
+            </div>
+            <a href="https://www.booking.com/attractions/ch/pruevsngof4a-interlaken-paragliding-experience.fr.html" target="_blank" rel="noopener noreferrer" class="book-button">
+              Reserver Maintenant ->
+            </a>
+          </div>
+        </div>
       </div>
+      <div class="hr-line">
+      <hr>
+      </div>
+
     </main>
 
     <footer id="contact">
-      <div class="footer-bottom">
-        <p>© 2025 Voyages & l'Aventure. Tous droits réservés.</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3> ✈️ Voyages & l'Aventure </h3>
+          <p> Votre partenaire de confiance pour des voyages inoubliables depuis 2025. </p>
+          <div class="social-links">
+            <a href="https://facebook.com" rel="noopener noreferrer" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://linkedin.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://Github.com" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-github"></i></a>
+          
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4> Destanations Populaires </h4>
+          <ul>
+            <li> <a href="#destinations">🇬🇷 Grèce </a></li>
+            <li> <a href="#destinations">🇯🇵 Japon </a></li>
+            <li> <a href="#destinations">🇲🇦 Maroc </a></li>
+            <li> <a href="#destinations">🇫🇷 France </a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4> Informations </h4>
+          <ul>
+            <li> <a href="index.html"> A propos </a></li>
+            <li> <a href="#Forfaits"> Nos Forfaits </a></li>
+            <li> <a href="#contact"> Contact </a></li>
+            <li> <a href="condition.html"> Conditions générales </a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4> Contactez-Nous</h4>
+          <ul class="contact-info">
+            <li>📞 +33 1 23 45 67 89</li>
+            <li>📧 info@voyages-aventure.fr</li>
+            <li>📍 Le Mans, France</li>
+            <li>⏰ Lun-Ven: 9h-18h</li>
+          </ul>
+        </div>
       </div>
-    </footer>
+
+      <div class="footer-bottom">
+        <p> © 2025 Voyages & l'Aventure. Tous droits réservés. </p>
+        <p class="footer-links">
+          <a href="#"> Politique de confidentialité </a>
+          <a href="#"> Mentions légales </a>
+          <a href="#"> Cookies </a>
+        </p>
+      </div>
+        </footer>
   </body>
 </html>

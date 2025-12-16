@@ -392,7 +392,7 @@ main {
 @media (max-width: 480px) {
   .booking-cards {
     padding: 30px 15px;
-  }
+  }   
   
   .booking-card {
     flex: 1 1 100%;
